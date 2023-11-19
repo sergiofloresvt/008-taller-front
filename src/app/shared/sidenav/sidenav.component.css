@@ -1,0 +1,36 @@
+.toolbar-container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.toolbar{
+    background: #4e4eb1;
+}
+ul li{
+    list-style: none;
+    
+}
+
+div ul {
+    display: flex;
+    align-items: center;
+
+}
+.menu-btn{
+    margin-left: auto;
+}
+.sidenav-container{
+    flex: 1;
+}
+.profile{
+    text-align: center;
+    padding: 0px 20px 20px 20px;
+
+}
+.header{
+    margin-top: 20px;
+}

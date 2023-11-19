@@ -1,0 +1,66 @@
+<div class="toolbar-container">
+
+  <!-- Inicio Toolbar-->
+    <mat-toolbar class="toolbar">
+
+        <button mat-icon-button (click)="snav.toggle()" ><mat-icon>menu</mat-icon></button>
+
+        <div class="menu-btn">
+            <ul>
+                <li>
+                    <button mat-icon-button>
+                        <mat-icon>help_outline</mat-icon>
+                        
+                    </button>
+                </li>
+                <li>
+                    <button mat-button [mat-menu-trigger-for]="menu">
+                        <mat-icon>person_outline</mat-icon>
+                        
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <mat-icon>exit_to_app</mat-icon>
+                        Cerrar Sesión
+                    </mat-menu>
+                </li>
+            </ul>
+        </div>
+
+    </mat-toolbar>
+      <!-- Fin Toolbar-->
+
+      <mat-sidenav-container class="sidenav-container">
+
+          <mat-sidenav #snav>
+
+              <mat-nav-list>
+                  <!--profile-->
+                  <div class="profile">
+                      <div class="header">
+
+                          <h2>Usuario Logueado</h2>
+                          <br/>
+                          <h3>sech@gmail.com</h3>
+
+                      </div>
+                  </div>
+
+                  <mat-divider></mat-divider>
+                      <a mat-list-item [routerLink]="nav.route" *ngFor=" let nav of menuNav"> 
+
+                            <mat-icon>{{nav.icon}}</mat-icon>
+                            {{nav.name}}
+                      </a>
+                  
+
+              </mat-nav-list>
+
+          </mat-sidenav>
+          
+          <mat-sidenav-content>
+                <router-outlet></router-outlet>
+          </mat-sidenav-content>
+
+      </mat-sidenav-container>
+</div>
+
