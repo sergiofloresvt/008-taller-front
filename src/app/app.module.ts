@@ -13,9 +13,9 @@ import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MaterialModule } from './shared/material.module';
-
-
-
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,9 @@ import { MaterialModule } from './shared/material.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]
